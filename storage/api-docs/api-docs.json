@@ -10,7 +10,7 @@
         "https"
     ],
     "paths": {
-        "/acv-dev/4cv-svc-otp/public/send-otp": {
+        "/send-otp": {
             "post": {
                 "tags": [
                     "OTP SMS"
