@@ -8,7 +8,7 @@ use App\Helpers\RestCurl;
 use App\Helpers\Api;
 use Illuminate\Support\Facades\Mail;
 use App\Http\Controllers\Validator;
-use App\Repositories\OTPrepo;
+use App\Repositories\OTPRepo;
 
 class OTPController extends Controller
 {  
@@ -43,7 +43,7 @@ class OTPController extends Controller
             $response = RestCurl::exec('GET', $url_awo, array(),'');
 
             // insert into database
-            $insert_data = OTPrepo::insert($request->phone_number , $message , $otp_code , $request->campaign);
+            $insert_data = OTPRepo::insert($request->phone_number , $message , $otp_code , $request->campaign);
 
             $status   = 1;
             $httpcode = 200;
