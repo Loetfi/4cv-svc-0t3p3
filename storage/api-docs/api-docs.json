@@ -10,7 +10,7 @@
         "https"
     ],
     "paths": {
-        "/send-otp": {
+        "/service-otp/send-otp": {
             "post": {
                 "tags": [
                     "OTP SMS"
