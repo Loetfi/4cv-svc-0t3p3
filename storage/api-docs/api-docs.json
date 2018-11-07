@@ -1,0 +1,63 @@
+{
+    "swagger": "2.0",
+    "info": {
+        "title": "Service OTP",
+        // "description": "This is a sample server Petstore server.  You can find out more about Swagger at [http://swagger.io](http://swagger.io) or on [irc.freenode.net, #swagger](http://swagger.io/irc/).  For this sample, you can use the api key `special-key` to test the authorization filters."
+    },
+    "basePath": "/",
+    "schemes": [
+        "http",
+        "https"
+    ],
+    "paths": {
+        "/acv-dev/4cv-svc-otp/public/send-otp": {
+            "post": {
+                "tags": [
+                    "OTP SMS"
+                ],
+                "summary": "OTP SMS",
+                "description": "Send OTP SMS",
+                "operationId": "otp_",
+                "consumes": [
+                    "application/json"
+                ],
+                "produces": [
+                    "application/json"
+                ],
+                "parameters": [
+                    {
+                        "in": "body",
+                        "name": "body",
+                        "description": "",
+                        "required": true,
+                        "schema": {
+                            "type": "object",
+                            "properties": {
+                                "phone_number": {
+                                    "type": "",
+                                    "example": "081311529594"
+                                },
+                                "description": {
+                                    "type": "text",
+                                    "example": "order acv"
+                                },
+                                "campaign": {
+                                    "type": "text",
+                                    "example": "Subject"
+                                }
+                            },
+                            "required": ["to", "subject","body","type","attachment"],
+                            "$schema": "http://json-schema.org/draft-04/schema#"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": ""
+                    }
+                },
+                "security": []
+            },
+        }, 
+    } 
+}
