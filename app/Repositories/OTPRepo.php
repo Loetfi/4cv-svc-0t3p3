@@ -9,7 +9,7 @@ class OTPRepo
 {
 	public static function insert($phone_number , $message , $otp_code , $campaign)
 	{
-		try { 
+		try {
 			$flight = new OTPModel;
             $flight->PhoneNumber = $phone_number;
             $flight->Message = $message;
