@@ -17,6 +17,8 @@ class ComposerStaticInitab4ec235628675752be3dadd8fe88485
         '6124b4c8570aa390c21fafd04a26c69f' => __DIR__ . '/..' . '/myclabs/deep-copy/src/DeepCopy/deep_copy.php',
         '0ccdf99b8f62f02c52cba55802e0c2e7' => __DIR__ . '/..' . '/zircote/swagger-php/src/functions.php',
         '3585c46f9622c6b622ab0011d4d72b3a' => __DIR__ . '/..' . '/darkaonline/swagger-lume/src/helpers.php',
+        '88c455bd77c2a9bcba69e590d5f387bb' => __DIR__ . '/..' . '/freshbitsweb/laratables/src/helpers.php',
+        '83c5b4042a3162a51b89dd77dc1632db' => __DIR__ . '/../..' . '/app/helpers.php',
     );
 
     public static $prefixLengthsPsr4 = array (
@@ -101,6 +103,7 @@ class ComposerStaticInitab4ec235628675752be3dadd8fe88485
         ),
         'F' => 
         array (
+            'Freshbitsweb\\Laratables\\' => 24,
             'FastRoute\\' => 10,
             'Faker\\' => 6,
         ),
@@ -321,6 +324,10 @@ class ComposerStaticInitab4ec235628675752be3dadd8fe88485
         array (
             0 => __DIR__ . '/..' . '/illuminate/auth',
         ),
+        'Freshbitsweb\\Laratables\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/freshbitsweb/laratables/src',
+        ),
         'FastRoute\\' => 
         array (
             0 => __DIR__ . '/..' . '/nikic/fast-route/src',
@@ -394,18 +401,23 @@ class ComposerStaticInitab4ec235628675752be3dadd8fe88485
         'App\\Exceptions\\Handler' => __DIR__ . '/../..' . '/app/Exceptions/Handler.php',
         'App\\Helpers\\Api' => __DIR__ . '/../..' . '/app/Helpers/Api.php',
         'App\\Helpers\\RestCurl' => __DIR__ . '/../..' . '/app/Helpers/RestCurl.php',
-        'App\\Http\\Controllers\\AuthController' => __DIR__ . '/../..' . '/app/Http/Controllers/AuthController.php',
         'App\\Http\\Controllers\\Controller' => __DIR__ . '/../..' . '/app/Http/Controllers/Controller.php',
         'App\\Http\\Controllers\\ExampleController' => __DIR__ . '/../..' . '/app/Http/Controllers/ExampleController.php',
+        'App\\Http\\Controllers\\ListDataOTPController' => __DIR__ . '/../..' . '/app/Http/Controllers/ListDataOTPController.php',
+        'App\\Http\\Controllers\\OTPController' => __DIR__ . '/../..' . '/app/Http/Controllers/OTPController.php',
         'App\\Http\\Middleware\\Authenticate' => __DIR__ . '/../..' . '/app/Http/Middleware/Authenticate.php',
         'App\\Http\\Middleware\\ExampleMiddleware' => __DIR__ . '/../..' . '/app/Http/Middleware/ExampleMiddleware.php',
         'App\\Http\\Middleware\\Jwt' => __DIR__ . '/../..' . '/app/Http/Middleware/Jwt.php',
         'App\\Jobs\\ExampleJob' => __DIR__ . '/../..' . '/app/Jobs/ExampleJob.php',
         'App\\Jobs\\Job' => __DIR__ . '/../..' . '/app/Jobs/Job.php',
         'App\\Listeners\\ExampleListener' => __DIR__ . '/../..' . '/app/Listeners/ExampleListener.php',
+        'App\\Models\\OTP' => __DIR__ . '/../..' . '/app/Models/OTP.php',
         'App\\Providers\\AppServiceProvider' => __DIR__ . '/../..' . '/app/Providers/AppServiceProvider.php',
         'App\\Providers\\AuthServiceProvider' => __DIR__ . '/../..' . '/app/Providers/AuthServiceProvider.php',
         'App\\Providers\\EventServiceProvider' => __DIR__ . '/../..' . '/app/Providers/EventServiceProvider.php',
+        'App\\Repositories\\DatatableOTPRepo' => __DIR__ . '/../..' . '/app/Repositories/DatatableOTPRepo.php',
+        'App\\Repositories\\OTPRepo' => __DIR__ . '/../..' . '/app/Repositories/OTPRepo.php',
+        'App\\Test' => __DIR__ . '/../..' . '/app/Test.php',
         'App\\User' => __DIR__ . '/../..' . '/app/User.php',
         'Carbon\\Carbon' => __DIR__ . '/..' . '/nesbot/carbon/src/Carbon/Carbon.php',
         'Carbon\\CarbonInterval' => __DIR__ . '/..' . '/nesbot/carbon/src/Carbon/CarbonInterval.php',
@@ -942,6 +954,15 @@ class ComposerStaticInitab4ec235628675752be3dadd8fe88485
         'FastRoute\\RouteCollector' => __DIR__ . '/..' . '/nikic/fast-route/src/RouteCollector.php',
         'FastRoute\\RouteParser' => __DIR__ . '/..' . '/nikic/fast-route/src/RouteParser.php',
         'FastRoute\\RouteParser\\Std' => __DIR__ . '/..' . '/nikic/fast-route/src/RouteParser/Std.php',
+        'Freshbitsweb\\Laratables\\ColumnManager' => __DIR__ . '/..' . '/freshbitsweb/laratables/src/ColumnManager.php',
+        'Freshbitsweb\\Laratables\\Exceptions\\IncorrectOrderColumn' => __DIR__ . '/..' . '/freshbitsweb/laratables/src/Exceptions/IncorrectOrderColumn.php',
+        'Freshbitsweb\\Laratables\\Exceptions\\LaratablesException' => __DIR__ . '/..' . '/freshbitsweb/laratables/src/Exceptions/LaratablesException.php',
+        'Freshbitsweb\\Laratables\\FilterAgent' => __DIR__ . '/..' . '/freshbitsweb/laratables/src/FilterAgent.php',
+        'Freshbitsweb\\Laratables\\Laratables' => __DIR__ . '/..' . '/freshbitsweb/laratables/src/Laratables.php',
+        'Freshbitsweb\\Laratables\\LaratablesServiceProvider' => __DIR__ . '/..' . '/freshbitsweb/laratables/src/LaratablesServiceProvider.php',
+        'Freshbitsweb\\Laratables\\QueryHandler' => __DIR__ . '/..' . '/freshbitsweb/laratables/src/QueryHandler.php',
+        'Freshbitsweb\\Laratables\\RecordsTransformer' => __DIR__ . '/..' . '/freshbitsweb/laratables/src/RecordsTransformer.php',
+        'Freshbitsweb\\Laratables\\RelationshipsManager' => __DIR__ . '/..' . '/freshbitsweb/laratables/src/RelationshipsManager.php',
         'Hamcrest\\Arrays\\IsArray' => __DIR__ . '/..' . '/hamcrest/hamcrest-php/hamcrest/Hamcrest/Arrays/IsArray.php',
         'Hamcrest\\Arrays\\IsArrayContaining' => __DIR__ . '/..' . '/hamcrest/hamcrest-php/hamcrest/Hamcrest/Arrays/IsArrayContaining.php',
         'Hamcrest\\Arrays\\IsArrayContainingInAnyOrder' => __DIR__ . '/..' . '/hamcrest/hamcrest-php/hamcrest/Hamcrest/Arrays/IsArrayContainingInAnyOrder.php',

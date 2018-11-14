@@ -4755,5 +4755,59 @@
             "rest",
             "service discovery"
         ]
+    },
+    {
+        "name": "freshbitsweb/laratables",
+        "version": "v1.1.1",
+        "version_normalized": "1.1.1.0",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/freshbitsweb/laratables.git",
+            "reference": "a321261f5ba0074c6334070d0aa91904ea5eb252"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/freshbitsweb/laratables/zipball/a321261f5ba0074c6334070d0aa91904ea5eb252",
+            "reference": "a321261f5ba0074c6334070d0aa91904ea5eb252",
+            "shasum": ""
+        },
+        "require": {
+            "illuminate/support": "5.5.*|5.6.*|5.7.*",
+            "php": ">=7.0"
+        },
+        "require-dev": {
+            "mockery/mockery": "^1.2",
+            "orchestra/testbench": "~3.0",
+            "phpunit/phpunit": "^7"
+        },
+        "time": "2018-10-27T05:49:22+00:00",
+        "type": "library",
+        "extra": {
+            "laravel": {
+                "providers": [
+                    "Freshbitsweb\\Laratables\\LaratablesServiceProvider"
+                ]
+            }
+        },
+        "installation-source": "dist",
+        "autoload": {
+            "psr-4": {
+                "Freshbitsweb\\Laratables\\": "src/"
+            },
+            "files": [
+                "src/helpers.php"
+            ]
+        },
+        "notification-url": "https://packagist.org/downloads/",
+        "license": [
+            "MIT"
+        ],
+        "authors": [
+            {
+                "name": "Gaurav Makhecha",
+                "email": "info@freshbits.in"
+            }
+        ],
+        "description": "Ajax support of DataTables for Laravel 5.5+"
     }
 ]

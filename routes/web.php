@@ -17,3 +17,8 @@ $router->get('/', function () use ($router) {
 });
 
 $router->post('/send-otp', 'OTPController@index');
+
+// Route::get('/get-custom-column-datatables-data', 'DataTableController@getCustomColumnDatatablesData')->name('custom_column_datatables_users_data');
+
+// get 
+$router->get('/get-data', 'ListDataOTPController@getCustomColumnDatatablesData');

@@ -9,6 +9,9 @@ use App\Helpers\Api;
 use Illuminate\Support\Facades\Mail;
 use App\Http\Controllers\Validator;
 use App\Repositories\OTPRepo;
+use Freshbitsweb\Laratables\Laratables;
+use App\Test;
+// use Freshbitsweb\Laratables\request;
 
 class OTPController extends Controller
 {  

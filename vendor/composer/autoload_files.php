@@ -16,4 +16,6 @@ return array(
     '6124b4c8570aa390c21fafd04a26c69f' => $vendorDir . '/myclabs/deep-copy/src/DeepCopy/deep_copy.php',
     '0ccdf99b8f62f02c52cba55802e0c2e7' => $vendorDir . '/zircote/swagger-php/src/functions.php',
     '3585c46f9622c6b622ab0011d4d72b3a' => $vendorDir . '/darkaonline/swagger-lume/src/helpers.php',
+    '88c455bd77c2a9bcba69e590d5f387bb' => $vendorDir . '/freshbitsweb/laratables/src/helpers.php',
+    '83c5b4042a3162a51b89dd77dc1632db' => $baseDir . '/app/helpers.php',
 );
