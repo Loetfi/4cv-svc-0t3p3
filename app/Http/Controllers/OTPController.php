@@ -16,10 +16,9 @@ use App\Test;
 class OTPController extends Controller
 {  
 
-    public function index(Request $request){
-
-
-        try{
+    public function index(Request $request) 
+    {
+        try {
             if(empty($request->json())) throw New \Exception('Params not found', 500);
 
             // awo configuration 
@@ -53,12 +52,13 @@ class OTPController extends Controller
             $data     = ['sms' => $message , 'otp_code' => $otp_code]; 
             $errorMsg = 'Success request OTP';
 
-        }catch(\Exception $e){
+        } catch(\Exception $e) {
             $status   = 0;
             $httpcode = 400;
             $data     = null;
             $errorMsg = $e->getMessage();
         }
+        
         return response()->json(Api::format($status, $data, $errorMsg), $httpcode);
     } 
 
