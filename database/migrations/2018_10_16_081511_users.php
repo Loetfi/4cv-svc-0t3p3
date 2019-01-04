@@ -15,11 +15,12 @@ class Users extends Migration
     {
         Schema::create('otp', function (Blueprint $table) {
             $table->increments('OTPSendId');
+            $table->integer('UserId');
             $table->string('PhoneNumber');
             $table->string('Message');
             $table->string('CodeOTP');
             $table->string('Campaign')->nullable();
-            $table->string('IsUsed', 1);
+            $table->string('IsUsed', 1)->default(0);
             $table->dateTime('CreatedAt')->nullable();
             $table->dateTime('ExpiredAt')->nullable();
             $table->dateTime('UpdatedAt')->nullable();

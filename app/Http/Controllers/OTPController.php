@@ -46,8 +46,7 @@ class OTPController extends Controller
             $response = RestCurl::exec('GET', $url_awo, array(),'');
 
             // insert into database
-            $is_used = 0;
-            $insert_data = OTPRepo::insert($request->phone_number , $message , $otp_code , $request->campaign, $is_used);
+            $insert_data = OTPRepo::insert($request->phone_number , $message , $otp_code , $request->campaign);
 
             $status   = 1;
             $httpcode = 200;
