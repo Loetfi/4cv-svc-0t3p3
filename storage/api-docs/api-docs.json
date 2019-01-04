@@ -33,6 +33,10 @@
                         "schema": {
                             "type": "object",
                             "properties": {
+                                "user_id": {
+                                    "type": "",
+                                    "example": "1"
+                                },
                                 "phone_number": {
                                     "type": "",
                                     "example": "081311529594"
@@ -46,7 +50,7 @@
                                     "example": "Subject"
                                 }
                             },
-                            "required": ["phone_number", "description","campaign"],
+                            "required": ["user_id","phone_number", "description","campaign"],
                             "$schema": "http://json-schema.org/draft-04/schema#"
                         }
                     }
