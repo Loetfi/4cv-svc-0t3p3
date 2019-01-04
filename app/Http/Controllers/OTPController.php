@@ -27,7 +27,7 @@ class OTPController extends Controller
             $sender             = 'ACV';
             
             $this->validate($request, [
-                'user_id'       => 'required|numeric'
+                'user_id'       => 'required|numeric',
                 'phone_number'  => 'required|numeric', 
                 'description'   => 'required',
                 'campaign'      => 'required'
