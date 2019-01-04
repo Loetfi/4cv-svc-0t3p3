@@ -13,14 +13,14 @@ class Users extends Migration
      */
     public function up()
     {
-
-        Schema::create('OTP', function (Blueprint $table) {
+        Schema::create('otp', function (Blueprint $table) {
             $table->increments('OTPSendId');
             $table->string('PhoneNumber');
             $table->string('Message');
             $table->string('CodeOTP');
             $table->string('Campaign')->nullable();
-            $table->rememberToken();
+            $table->dateTime('ExpiredAt')->nullable();
+            $table->string('IsUsed', 1)->nullable();
             $table->timestamps();
         });
     }
@@ -32,6 +32,6 @@ class Users extends Migration
      */
     public function down()
     {
-        //
+        Schema::dropIfExists('otp');
     }
 }

@@ -36,7 +36,7 @@ class OTPController extends Controller
 
             // start message OTP
             $otp_code   = rand (10000,99999);
-            $message    = 'Your One Time Password (OTP) for ACV is '.$otp_code.' and valid for 2 minutes.';
+            $message    = 'OTP password anda untuk ACV adalah '.$otp_code.' dan berlaku selama 2 menit';
             // end message
 
             
@@ -46,7 +46,8 @@ class OTPController extends Controller
             $response = RestCurl::exec('GET', $url_awo, array(),'');
 
             // insert into database
-            $insert_data = OTPRepo::insert($request->phone_number , $message , $otp_code , $request->campaign);
+            $is_used = 0;
+            $insert_data = OTPRepo::insert($request->phone_number , $message , $otp_code , $request->campaign, $is_used);
 
             $status   = 1;
             $httpcode = 200;

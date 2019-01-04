@@ -6,7 +6,7 @@ use Illuminate\Database\Eloquent\Model;
 class OTP extends Model
 {
     
-    protected $table = 'OTP';
+    protected $table = 'otp';
     protected $primaryKey = 'OTPSendId';
 
     /**
@@ -15,11 +15,12 @@ class OTP extends Model
      * @var array
      */
     protected $fillable = [
-        'PhoneNumber','Message','CodeOTP','Campaign'
+        'PhoneNumber','Message','CodeOTP','Campaign','IsUsed'
     ];
  
 
     protected $dates = [
+        'ExpiredAt',
         'created_at',
         'updated_at'
     ];
