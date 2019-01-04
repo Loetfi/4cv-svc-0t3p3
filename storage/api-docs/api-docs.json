@@ -46,7 +46,7 @@
                                     "example": "Subject"
                                 }
                             },
-                            "required": ["to", "subject","body","type","attachment"],
+                            "required": ["phone_number", "description","campaign"],
                             "$schema": "http://json-schema.org/draft-04/schema#"
                         }
                     }

@@ -19,9 +19,11 @@ class Users extends Migration
             $table->string('Message');
             $table->string('CodeOTP');
             $table->string('Campaign')->nullable();
+            $table->string('IsUsed', 1);
+            $table->dateTime('CreatedAt')->nullable();
             $table->dateTime('ExpiredAt')->nullable();
-            $table->string('IsUsed', 1)->nullable();
-            $table->timestamps();
+            $table->dateTime('UpdatedAt')->nullable();
+
         });
     }
 

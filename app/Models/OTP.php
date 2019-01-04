@@ -21,7 +21,7 @@ class OTP extends Model
 
     protected $dates = [
         'ExpiredAt',
-        'created_at',
-        'updated_at'
+        'CreatedAt',
+        'UpdatedAt'
     ];
 }
