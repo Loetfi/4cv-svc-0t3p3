@@ -25,15 +25,10 @@ class OTPRepo
 
 	} 
 
-	public static function insert($phone_number , $message , $otp_code , $campaign)
+	public static function insert($data)
 	{
 		try {
-			$flight = new OTPModel;
-			$flight->PhoneNumber = $phone_number;
-			$flight->Message = $message;
-			$flight->CodeOTP = $otp_code;
-			$flight->Campaign = $campaign;
-			$flight->save();
+			OTPModel::create($data);
 			return 'success_insert';
 		}catch(QueryException $e){
 			throw new \Exception($e->getMessage(), 500);
