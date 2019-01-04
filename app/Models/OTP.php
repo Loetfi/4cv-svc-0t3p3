@@ -16,13 +16,7 @@ class OTP extends Model
      * @var array
      */
     protected $fillable = [
-        'UserId','PhoneNumber','Message','CodeOTP','Campaign','IsUsed'
-    ];
- 
-
-    protected $dates = [
-        'ExpiredAt',
-        'CreatedAt',
-        'UpdatedAt'
+        'UserId','PhoneNumber','Message','CodeOTP','Campaign','IsUsed',
+        'ExpiredAt','CreatedAt','UpdatedAt'
     ];
 }

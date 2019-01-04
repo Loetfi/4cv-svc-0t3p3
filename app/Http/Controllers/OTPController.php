@@ -48,10 +48,13 @@ class OTPController extends Controller
             $data_otp = [
                 'UserId'        => $request->user_id,
                 'PhoneNumber'   => $request->phone_number,
-                'Message'       => $request->message,
-                'CodeOtp'       => $otp_code,
+                'Message'       => $message,
+                'CodeOTP'       => $otp_code,
                 'Campaign'      => $request->campaign,
+                'CreatedAt'    => \Carbon\Carbon::now()->format('Y-m-d H:i:s'),
+                'ExpiredAt'    => \Carbon\Carbon::now()->addMinutes(2)->format('Y-m-d H:i:s')
             ]; 
+
             $insert_data = OTPRepo::insert($data_otp);
 
             $status   = 1;
